@@ -10,7 +10,7 @@
     "comments",
     "blog"
   ],
-  "homepage": "https://utteranc.es",
+  "homepage": "https://jungley8.github.io/utterances",
   "bugs": "https://github.com/utterance/utterances/issues",
   "repository": {
     "type": "git",
@@ -22,11 +22,11 @@
   },
   "scripts": {
     "preparcel": "rm -rf dist;mkdir dist",
-    "parcel": "parcel $RUN src/*.html src/client.ts src/stylesheets/themes/*/{index,utterances}.scss",
+    "parcel": "parcel $RUN  --public-url https://jungley8.github.io/utterances/ src/*.html src/client.ts src/stylesheets/themes/*/{index,utterances}.scss",
     "build": "RUN=build npm run parcel --",
     "start": "RUN=serve npm run parcel -- --port 4000",
-    "predeploy": "npm run build && touch dist/.nojekyll && echo 'utteranc.es' > dist/CNAME",
-    "deploy": "gh-pages --dist dist",
+    "predeploy": "npm run build && touch dist/.nojekyll",
+    "deploy": "rm -fr node_modules/.cache/gh-pages && gh-pages --dist dist",
     "reinstall": "git clean -fxd -e .env && rm -f package-lock.json && npm install",
     "update-deps": "npm exec --package npm-check-updates --call 'ncu -u -x @primer/css' && git clean -fxd -e .env && rm package-lock.json && npm install"
   },

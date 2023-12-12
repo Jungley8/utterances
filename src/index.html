@@ -14,7 +14,7 @@
       <link
         id="theme-stylesheet"
         rel="stylesheet"
-        href="https://utteranc.es/stylesheets/themes/github-light/index.css"
+        href="https://Jungley8.github.io/utterances/stylesheets/themes/github-light/index.css"
       />
     </if>
     <else>
@@ -49,7 +49,7 @@
     />
     <link rel="shortcut icon" href="./icons/favicon.ico" />
     <if condition="NODE_ENV === 'production'">
-      <link rel="canonical" href="https://utteranc.es" />
+      <link rel="canonical" href="https://Jungley8.github.io/utterances" />
     </if>
     <else>
       <link rel="canonical" href="http://localhost:4000/index.html" />
@@ -89,8 +89,8 @@
 
     <if condition="NODE_ENV === 'production'">
       <script
-        src="https://utteranc.es/client.js"
-        repo="utterance/utterances"
+        src="https://Jungley8.github.io/utterances/client.js"
+        repo="Jungley8/discuss"
         issue-term="homepage"
         crossorigin="anonymous"
         theme="github-light"
@@ -100,7 +100,7 @@
     <else>
       <script
         src="http://localhost:4000/client.js"
-        repo="jdanyow/utterances-demo"
+        repo="Jungley8/discuss"
         issue-term="pathname"
         label="💬 comment"
         crossorigin="anonymous"
@@ -108,30 +108,5 @@
         async
       ></script>
     </else>
-
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "https://www.google-analytics.com/analytics.js",
-        "ga"
-      );
-
-      ga("create", "UA-59973368-11", "auto");
-      ga("send", "pageview");
-    </script>
   </body>
 </html>
